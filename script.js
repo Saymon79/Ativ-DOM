@@ -1,43 +1,35 @@
 
-// Selecionando todas as caixas
-const caixas = document.querySelectorAll(".caixa");
+let caixas = document.querySelectorAll(".caixa");
 
-// Selecionando os botões
-const botaoPrincipal = document.querySelector("#botaoPrincipal");
-const botaoSecundario = document.querySelector("#botaoSecundario");
+let botaoPrincipal = document.querySelector("#principal");
+let botaoSecundario = document.querySelector("#secundario");
 
-// Ao clicar em cada caixa, coloca a borda verde
+// Clicar na caixa e deixar a borda verde
 caixas.forEach(function(caixa) {
 
     caixa.addEventListener("click", function() {
-
-        caixa.classList.remove("borda-azul");
-        caixa.classList.add("borda-verde");
-
+        caixa.classList.remove("azul");
+        caixa.classList.add("verde");
     });
 
 });
 
-// Botão principal: todas as caixas ficam com borda azul
+// Botão principal deixa todas as bordas azuis
 botaoPrincipal.addEventListener("click", function() {
 
     caixas.forEach(function(caixa) {
-
-        caixa.classList.remove("borda-verde");
-        caixa.classList.add("borda-azul");
-
+        caixa.classList.remove("verde");
+        caixa.classList.add("azul");
     });
 
 });
 
-// Botão secundário: remove todas as bordas coloridas
+// Botão secundário tira as bordas
 botaoSecundario.addEventListener("click", function() {
 
     caixas.forEach(function(caixa) {
-
-        caixa.classList.remove("borda-verde");
-        caixa.classList.remove("borda-azul");
-
+        caixa.classList.remove("verde");
+        caixa.classList.remove("azul");
     });
 
 });
